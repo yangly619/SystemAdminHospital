@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to admin page</title>
+    <link rel="stylesheet"href="../../static/css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        background: url("../../static/img/fondo_admin.jpg")no-repeat ;
+        background-size: 100%;
+    }
+    .three{
+        height: 75px ;
+        width: 300px;
+        font-size: 23px;
+        border-radius: 20px;
+        background-color:deepskyblue;
+    }
+    .two{
+        height: 50px;
+        width: 120px;
+        font-size: 16px;
+        margin-right: 100px;
+        margin-top: 35px;
+        border-radius: 20px;
+        background-color:royalblue;
+    }
+    .f{
+        margin-top: 100px;
+        margin-left: 850px;
+    }
+</style>
+<body>
+{#<div id="bg">#}
+        <form action=""class="f">
+                    {% csrf_token %}
+            <input type="submit" class="three btn-info" value="Appointment" formmethod="post"formaction="/guahao/">
+            <br><br>
+            <input type="submit" class="three btn-info" value="Patient query" formmethod="get"formaction="/search_p/">
+            <br><br>
+            <input type="submit" class="three btn-info" value="Doctor query" formmethod="get"formaction="/search_d/">
+            <br><br>
+            <input type="submit" class="three btn-info" value="Drug management" formmethod="get"formaction="/medicine/">
+        </form>
+    <form action="/new_login/">
+            <input type="submit" class="two btn-info" value="Exit">
+    </form>
+{#</div>#}
+</body>
+</html>

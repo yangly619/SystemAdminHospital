@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+    <link rel="stylesheet"href="../../static/css/bootstrap.min.css">
+    <style>
+        h2{
+            padding-left: 60%;
+             margin-top: 4%;
+        }
+        input{
+            width: 120px;
+            font-size: 22px;
+            border-radius: 5px;
+        }
+          body{
+            background: url("../../static/img/1234.png") no-repeat center center fixed;
+            background-size: 100%;
+              font-size: 28px;
+        }
+         .bg{
+            width:500px;
+            height:300px;
+            margin-top: 5%;
+             margin-left: 50%;
+            background-color: rgba(142 ,229 ,238,0.5);
+        }
+        .btn input{
+             width: 130px;
+             height: 50px;
+             background: #87CEFF;
+             border-radius: 20px;
+            font-size: 18px;
+         }
+
+         .btn{
+            margin-left:83%;
+        }
+
+        .b1,.b2{
+            margin-left: 15% ;
+            padding-top:10%;
+        }
+    </style>
+</head>
+<body>
+  <h2>Add medicine</h2>
+    <form >
+           {% csrf_token %}
+      <div class="bg">
+        <div class="b1">Drug：<input value="{{ medicine_ }}" type="text" readonly></div><br>
+        <div class="b2">Please enter quantity：<input type="text"value="{{ num }}" name="number"></div>
+          </div>
+        <div class="btn">
+            <p class="btn1 btn-default"><input type="submit"value="confirm" onclick="alert('Success！')" formaction="/add_medicine/"formmethod="post"></p>
+            <p class="btn1 btn-default"><input type="submit" value="Back"name=""formaction="/back1/"formmethod="get"></p>
+            </div>
+        </form>
+</body>
+</html>
